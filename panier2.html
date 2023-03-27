@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Panier - Mon site web</title>
+       <link rel="stylesheet" href="style-panier.css">
+     
+  </head>
+  <body>
+    <h1>Panier</h1>
+    <table>
+      <thead>  <!-- pour le titre de chaque colonne-->
+        <tr>
+          <th>Produit</th> <!--pour les en-têtes de chaque colonne-->
+          <th>Prix unitaire</th>
+          <th>Quantité</th>
+          <th>Prix total</th>
+          <th>Instructions spéciales</th>
+        </tr>
+      </thead>
+      <tbody> <!--pour le corps de chaque colonne-->
+        <tr>
+          <td>
+            <img src="images/arsenal_retro.jpg" alt="Arsenal 1996-98">
+            <div>Arsenal 1996-98</div>
+          </td>
+          <td>149,99 €</td>
+          <td class="quantite">
+          <!-- <button type="button" onclick="decrement(this)">-</button>-->
+            <input type="number" name="quantite1" value="2">
+            <!--<button type="button" onclick="increment(this)">+</button>-->
+          </td>
+          <td>299,98 €</td>
+          <td><textarea name="commentaire1"></textarea></td> 
+        </tr>
+        <tr>
+          <td>
+            <img src="images/bresil_r9_retro.jpg" alt="Nom du produit 2">
+            <div>#R9 Bresil 2002</div>
+          </td>
+          <td>149,99 €</td>
+          <td class="quantite">
+           <!-- <button type="button" onclick="decrement(this)">-</button>-->
+            <input type="number" name="quantite2" value="1">
+            <!--<button type="button" onclick="increment(this)">+</button>-->
+          </td>
+          <td>149,99 €</td>
+          <td><textarea name="commentaire2"></textarea></td>
+        </tr>
+        <tr>
+          <td colspan="3">Total :</td>  <!--pour que "Total" s'etende sur les 3 premikères colonnes soient vides; en plus il sera à gauche car first child-->
+          <td>449,97 €</td>
+         <!-- <td></td>-->
+        </tr>
+      </tbody>
+    </table>
+   <!--<form action="traitement.php" method="post"></form>-->
+      <button type="submit">Passer commande</button>
+  <!-- </form>-->
+  </body>
+</html>
+
