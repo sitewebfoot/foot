@@ -1,0 +1,210 @@
+/*body {
+    font-family: sans-serif; /* Police de caractère */
+    /*margin: 0;
+    padding: 0;
+}*/
+.conteneur {
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centrage du conteneur */
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 5px; /* Arrondi des bords */
+    display: flex; /* Utilisation de flexbox pour faciliter la mise en page; Pour avoir la description a droite de l'image */ /* pour aligner les elements*/
+    flex-wrap: wrap; /* Permet de faire en sorte que l'image ne soit pas trop grande */
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+}
+.conteneur .description h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #000305;
+    line-height: 1.2;
+    margin: 5px;
+}
+
+.conteneur .description p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px;
+}
+.conteneur .description {
+    max-width: 600px; 
+    font-size: 18px; 
+    /*line-height: 1.8; /* Pour que les lignes soient espacées */
+    color: #555;
+    text-align: left; /* Pour que le texte soit aligné à gauche */
+    /*flex-grow: 1; /* Pour que la description prenne toute la place disponible */ /*c'est a dire plus d'espace que les autres elements du conteneur*/
+    margin-right: 50px;
+}
+.conteneur img {
+    max-width: 25%;
+    height: auto;
+    margin-bottom: 20px;
+}
+/*.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007aff;
+    margin-bottom: 4px;
+}*/
+/*button {
+    display: inline-block;
+    background-color: #3e3ebd;
+    color: #faf9fd;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}*/
+/* button{
+    background-color: #000600;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; /* important pour le style des boutons et pour que le bouton soit aligné avec le texte */
+   /*  font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0342d6;
+}
+/* Attributs du produit */
+.conteneur .attributs {
+    margin-top: 20px; /* Pour que les attributs soient espacés du haut */
+}
+
+/* Chaque attribut */
+.conteneur .attribut {
+    display: flex; /* Pour que le nom et la valeur soient alignés */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Nom de l'attribut */
+.attribut-nom {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Valeur de l'attribut */
+.attribut-valeur {
+    color: #555;
+}
+.logo2-and-text2 img { /*pour dire que c'est nous qui vendons le produit*/
+    float: right; /* ESSENTIEL*/ /*pour mettre l'image a droite du texte*/
+    margin-right: 10px; /* pour ajouter un peu d'espace entre l'image et le texte */
+    /*margin-top:1px;/*pour mettre le logo a un bon niveau du texte*/
+    margin-bottom: 10;
+    width: 20px;
+    height: 20px;
+    /* max-width: 100%;
+    max-height: 100%;*/
+}
+.favoris2-et-text2 img { /*pour dire que c'est nous qui vendons le produit*/
+    float: right; /*pour mettre l'image a droite du texte*/
+    margin-left: 170px; /* pour ajouter un peu d'espace entre l'image et le texte */
+    margin-bottom: auto;/*pour mettre le logo a un bon niveau du texte*/
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}   
+/* Vous aimeriez peut-etre*/
+/* .produit-conteneur {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.produit {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    margin: 10px;
+    padding: 10px;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.produit img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}*/
+/*pour la presentation des produits: */
+.produit-conteneur { /* permet l'alignement et l'adapatation des produits sur une ligne*/
+    display: flex;/* pour utiliser flexbox *//* pour gérer la disposition des éléments*/
+    flex-wrap: wrap;/*pour passer a la ligne quand il n'y a plus de place entre les produits*/
+    text-align: center;
+    justify-content: space-between; /*pour aligner horizontalement les produits*/
+  }
+  
+.produit-conteneur .produit {/* specifique a chaque produit*/
+    border: 1px solid #ccc;
+    background-color:#f9f9f9;
+    margin: 10px;
+    padding: 10px; /* pour ajouter un peu d'espace entre l'image et les bords de la case*/
+    width: 20%;
+    box-sizing: border-box; /* pour que la largeur de la case soit bien celle définie par width*/
+  }
+  
+  .produit-conteneur .produit img {
+    display: block;/*pour que l'image prenne toute la largeur de la case*/
+    max-width: 100%;
+    height: auto;
+  } 
+  /*button acheter*/
+  button{
+    background-color: #000300;
+    border: none; 
+    color: white; 
+    padding: 15px 32px; /*pour la taille du bouton*/
+    text-align: center;
+    text-decoration: none;/*pour enlever le soulignement du texte*/
+    display: inline-block; /*pour que le bouton soit centré*/ /* important pour le style des boutons et pour que le bouton soit aligné avec le texte */
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover { /*pour changer la couleur du bouton quand on passe la souris dessus*/
+    background-color: #0342d6;
+}
+.produit-conteneur .produit .logo-and-text img { /*pour dire que c'est nous qui vendons le produit*/
+    float: right; /* ESSENTIEL*/ /*pour mettre l'image a droite du texte*/
+    margin-right: 10px; /* pour ajouter un peu d'espace entre l'image et le texte */
+    margin-top:6px;/*pour mettre le logo a un bon niveau du texte*/
+    width: 20px;
+    height: 20px; 
+   /* max-width: 100%;
+    max-height: 100%;*/
+  }
+  .produit-conteneur .produit .favoris-et-text img { /*pour dire que c'est nous qui vendons le produit*/
+      float: right; /*pour mettre l'image a droite du texte*/
+      margin-right: 40px; /* pour ajouter un peu d'espace entre l'image et le texte */
+      margin-top:5px;/*pour mettre le logo a un bon niveau du texte*/
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      
+  
+     /* max-width: 100%;
+      max-height: 100%;*/
+  }
+  .produit-conteneur .produit h2 {
+    margin: 0;
+    padding: 10px;
+    color: rgb(5, 5, 5); /* pour rendre le texte visible sur l'image de fond */
+  }
+  .produit-conteneur .produit .favoris-et-text p {
+    margin: 0;
+    padding: 10px;
+    text-decoration: none;
+  }

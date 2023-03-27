@@ -1,0 +1,209 @@
+/* Css pour la page d'accueil */
+/**************************************************************/
+/* pour l'image en fond de page: */
+.image-background { /* conteneur de l'image de fond */
+  background-image: url('images/messi_mbappe2.jpg');/* l'image de fond */
+  background-size: cover; /* pour que l'image prenne toute la largeur de l'écran */
+  height: 500px; /* hauteur de l'image de fond */
+  display: flex; /* pour utiliser flexbox */ /* pour gérer la disposition des éléments*/
+  justify-content: center; /* centrer verticalement le conteneur */
+  align-items: center; /* centrer verticalement le conteneur */
+  flex-direction: column; /* pour empiler les éléments les uns en dessous des autres */
+  text-align: center; /* pour centrer le texte */
+}
+
+h1 {
+  margin: 0;
+  padding: 20px;
+  color: rgb(249, 239, 239); /* pour rendre le texte visible sur l'image de fond */
+}
+h2 {
+  margin: 0;
+  padding: 20px;
+  color: rgb(5, 5, 5); /* pour rendre le texte visible sur l'image de fond */
+}
+/*pour les deux cases de texte: */
+.conteneur {
+  display: flex;/* pour utiliser flexbox *//* pour gérer la disposition des éléments*/
+  flex-wrap: nowrap;/* pour empiler les éléments les uns en dessous des autres */
+  justify-content: space-between;/* pour centrer le texte */
+  width: 80%;
+  margin-top: 20px;/* pour avoir un espace par rapport au bord seperieur*/
+}
+
+.box { /*pour les deux cases*/
+  width: 49%;
+  border: 5px solid black;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 10px;
+  text-decoration: none;
+}
+/**********************************************************************************************************/
+/*pour la presentation des produits: */
+.produit-conteneur { /* permet l'alignement et l'adapatation des produits sur une ligne*/
+  display: flex;/* pour utiliser flexbox *//* pour gérer la disposition des éléments*/
+  flex-wrap: wrap;/*pour passer a la ligne quand il n'y a plus de place entre les produits*/
+  text-align: center;
+  justify-content: space-between; /*pour aligner horizontalement les produits*/
+}
+
+.produit {/* specifique a chaque produit*/
+  border: 1px solid #ccc;
+  background-color:#f9f9f9;
+  margin: 10px;
+  padding: 10px; /* pour ajouter un peu d'espace entre l'image et les bords de la case*/
+  width: 20%;
+  box-sizing: border-box; /* pour que la largeur de la case soit bien celle définie par width*/
+}
+
+.produit img {
+  display: block;/*pour que l'image prenne toute la largeur de la case*/
+  max-width: 100%;
+  height: auto;
+} 
+.logo-and-text img { /*pour dire que c'est nous qui vendons le produit*/
+  float: right; /* ESSENTIEL*/ /*pour mettre l'image a droite du texte*/
+  margin-right: 10px; /* pour ajouter un peu d'espace entre l'image et le texte */
+  margin-top:15px;/*pour mettre le logo a un bon niveau du texte*/
+  width: 20px;
+  height: 20px; 
+ /* max-width: 100%;
+  max-height: 100%;*/
+}
+.favoris-et-text img { /*pour dire que c'est nous qui vendons le produit*/
+    float: right; /*pour mettre l'image a droite du texte*/
+    margin-right: 40px; /* pour ajouter un peu d'espace entre l'image et le texte */
+    margin-top:5px;/*pour mettre le logo a un bon niveau du texte*/
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    
+
+   /* max-width: 100%;
+    max-height: 100%;*/
+}
+/*button acheter*/
+button{
+    background-color: #000300;
+    border: none; 
+    color: white; 
+    padding: 15px 32px; /*pour la taille du bouton*/
+    text-align: center;
+    text-decoration: none;/*pour enlever le soulignement du texte*/
+    display: inline-block; /*pour que le bouton soit centré*/ /* important pour le style des boutons et pour que le bouton soit aligné avec le texte */
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button:hover { /*pour changer la couleur du bouton quand on passe la souris dessus*/
+    background-color: #0342d6;
+}
+/************************************************************************************/
+/*pour les produits de collection speciaux*/
+.produit-speciaux { /*pour bien disposer les images*/ /* pour faire aligner les images sur une ligne*/
+  display: flex;/* c'est essentiel pour mettre les images sur une ligne*/
+  flex-wrap: wrap;/*pour passer a la ligne quand il n'y a plus de place entre les produits*/
+  justify-content: space-between; /*pour mettre de l'espace entre les images*/
+}
+
+.produit-item {/*pour chaque image*/
+  width: calc(33.3% - 10px);/*pour le calcul de la largeur de chaque image*//*pour avoir une bonne taille de l'image adaptée a la taille de l'écran*/
+  margin-bottom: 20px;/*la distance avec la marge inferieure*/
+  position: relative;/*pour faire apparaitre le bouton decouvrir*/
+}
+
+.produit-item img {
+  width: 100%;
+  height: auto;
+  display: block;/*pour que l'image prenne toute la largeur de la case*/
+}
+
+.produit-item .overlay { /*parce que l'overlay est dans le produit-item*/
+  position: absolute; /*pour que l'overlay soit au dessus de l'image*/
+  top: 0; /*sert a centrer l'overlay*/
+  left: 0;/*sert a centrer l'overlay*/
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0; /*pour que l'overlay soit transparent*/
+  transition: opacity 0.3s ease-in-out; /*pour que l'overlay apparaisse progressivement*/
+  display: flex; /*permet de faire apparaitre le bouton decouvrir au centre de l'image*/ /*pour faire apparaitre le fond*/
+  flex-direction: column; /*pour que le bouton decouvrir soit au centre de l'image*/
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.produit-item:hover .overlay {/*pour que l'overlay apparaisse quand on passe la souris sur l'image*/
+  opacity: 1;
+}
+
+.produit-item h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.btn-decouvrir {/*bouton decouvrir*/
+  padding: 10px 20px; /*pour que le bouton ait une bonne forme*/
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-decouvrir:hover {
+  background-color: #333;
+  color: #fff;
+}
+/**************************************************************/
+ /* Style pour les avis */
+ .avis-conteneur { /*permet de mettre les avis en ligne*/
+  background-color: #f7f7f7;
+  padding: 50px 0; /*pour la disposition des avis dans le conteneur*/
+  display: flex; /*pour mettre les elements en ligne*/
+  flex-wrap: nowrap; /*pour que les avis ne passent pas a la ligne*/
+ /* overflow-x: auto; */ /*pour faire defiler les avis*/
+}
+
+.avis-conteneur h2 { /* pour le titre avis*/
+  font-size: 28px;
+  margin-bottom: 30px; 
+  color: #000;
+}
+ .avis {
+  /*flex: 0 0 auto;*/
+  margin-right: 30px; /*pour mettre un peu d'espace entre les avis*/
+  max-width: calc(100% / 3 - 60px); /*pour la largeur de chaque avis*/
+}
+
+/*.avis:last-child { /* sert a enlever la marge a droite du dernier avis
+  margin-right: 0;
+}*/
+
+.avis img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.avis-txt { 
+  flex-grow: 1; /*pour que le texte s'adapte a la taille de l'ecran*/
+}
+
+.avis-text p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.avis-auteur {
+  font-style: italic;
+  font-size: 16px;
+}

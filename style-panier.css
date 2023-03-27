@@ -1,0 +1,80 @@
+table {
+    border-collapse: collapse; /* pour que les bordures des cellules soient collées */
+    width: 100%; /* pour que le tableau prenne toute la largeur de la page */
+  }
+  th, td {
+    padding: 8px; /* pour l'espacement entr les lignes */
+    text-align: center; /* pour centrer le texte */
+  }
+  th {
+    background-color: #ddd;
+  }
+  td:first-child { /*pour la première colonne*/ /* permet de mettre le nom de l'article tout a gauche*/
+    text-align: left; /*sert à aligner le texte à gauche*/
+  }
+  td:last-child { /*pour la dernière colonne*/ /* pour mettre le prix total en gras*/
+    font-weight: bold;
+  }
+  textarea {
+    width: 100%;
+    height: 100px;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block; /* pour pouvoir utiliser margin: auto; */
+    margin: auto; /*pour centrer le bouton*/
+    margin-top: 25px;
+
+  }
+  button:hover {
+    background-color: #3e8e41;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  form {
+    text-align: center;
+    margin-top: 20px;
+  }
+  img { /* pour que l'image prenne toute la largeur de la case */
+    display: block;  
+    margin: auto;
+    max-width: 5%; /*important pour adapter la taille de l'image*/
+    height: auto;
+  }
+  .quantite {
+    /*display:flex; /* pour utiliser l'adaptation dynamique (justify-content: center; et align-items: center;) */
+    /*justify-content: center; 
+    align-items: center;*/
+    margin: 50px 5px; /*pour faire aligner les nombres*/
+  }
+ /* .quantite button {
+    width: 15px;
+    height: 30px;
+   /* background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    margin: 40px 5px;
+    text-align: center;
+  }
+/*  .quantite button:hover {
+    background-color: #ccc;
+  }*/
+  .quantite input {
+    width: 40px;
+    border: none;
+    text-align: center; /*pour centrer le nombre dans la case */
+    border: 1px solid black;
+  }
+
+
+
+
+
