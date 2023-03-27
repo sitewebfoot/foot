@@ -1,0 +1,25 @@
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px; 
+  position: fixed; /* pour que le footer reste en bas de page */
+  bottom: 0;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.reseaux {
+  display: flex; /* pour que les li soient alignés horizontalement */
+  justify-content: center;
+}
+
+.reseaux li {
+  list-style: none; /* pour enlever les puces */
+  margin: 0 10px;
+}
+
+.reseaux img {
+  width: 30px;
+  height: 30px;
+}

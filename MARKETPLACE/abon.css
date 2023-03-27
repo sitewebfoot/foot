@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* bloque  defilement horizontal */
+}
+
+/*-----------------HEADER------------
+
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+*/
+
+.entete{
+  padding-bottom: 0%;
+  width:100%;
+}
+
+
+.deroulant {
+position: relative; 
+display: inline-block; 
+}
+
+.contenu-deroulant {
+display: none;
+position: absolute;
+top: 100%;
+left: 0; 
+z-index: 1; 
+min-width: 160px; 
+background-color: #fff; /* Remplacez la couleur par celle de votre choix */
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+}
+
+.contenu-deroulant a {
+color: black;
+padding: 12px 16px; 
+text-decoration: none;
+display: block; 
+}
+
+.deroulant:hover .contenu-deroulant {
+display: block;
+}
+
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+
+
+}
+
+nav ul ul {
+  display: none;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 0.5%;
+  padding-bottom: 0.25%;
+  
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+
+}
+
+
+.menu2{ /*menu2*/
+background: black; /*couleur de fond*/ 
+display: flex; /*affichage en ligne*/
+justify-content: center; /*centrage*/
+font-style: none; /*style de police*/
+
+}
+
+.menu2 a:link, .menu2 a:visited{ /*menu2*/
+display: inline-block; /*affichage en ligne*/
+text-decoration: none; /*pas de soulignement*/
+color:  white;  /*couleur du texte*/
+font-size: 20px; /*taille de police*/
+}
+.menu2>li{  /*menu2 */
+list-style: none;  /*pas de puce*/
+padding: 0.5%;  /*marge interne*/
+padding-bottom: 0.25%;  /*marge interne*/
+margin-right: 100px;   /*marge externe*/ 
+
+}
+
+
+
+#barre-recherche { 
+display: flex;
+justify-content: center;
+text-align: center;
+transform: translate(-120%, 70%); /* Permet de centrer l'élément */
+}
+
+
+
+
+
+/*#panier>a{
+color: black;
+/* background-color: #faf5ef;
+border: solid 1px ;
+padding: 10%;
+border-radius: 20%;    
+}*/
+
+
+
+
+#connexion>a{
+color: black;
+/* background-color: #faf5ef;*/
+border: solid 1px ;
+padding: 5%;
+border-radius: 20%;    
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/*-----------------footer------------*/
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 5px; 
+  position: fixed; /* pour que le footer reste en bas de page */
+  bottom: 0;
+  width: 100%;
+  margin-left: -10px;
+}
+
+.reseaux {
+  display: flex; /* pour que les li soient alignés horizontalement */
+  justify-content: center;
+}
+
+.reseaux li {
+  list-style: none; /* pour enlever les puces */
+  margin: 0 10px;
+}
+
+.reseaux img {
+  width: 30px;
+  height: 30px;
+}

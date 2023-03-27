@@ -1,0 +1,283 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="projet_contact.css"> <!--pour prendre css-->
+<meta charset="utf-8"> <!--encodage caractere pour le navigateur-->
+
+</head>
+
+<body>
+
+
+
+    <header>
+        <!--<nav>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Équipes</a></li>
+            <li><a href="#">Joueurs</a></li>
+            <li><a href="#">Matchs</a></li>
+            <li><a href="#">Classement</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav> -->
+    
+      
+              <!-----------------ENTETE-------------->
+    
+          <div class="entete">  
+              <table width=100%>
+              <tr><td><a href="https://www.nike.com"><img src="./logo.jpeg" style="width: 10%;margin-top: 0px;"></a></td>
+               
+                <td id="barre-recherche"><form>
+                  <input type="text" placeholder="Recherche..." style="width: 100%;">
+                  <button type="submit">Rechercher</button>
+                </form></td>
+    
+             <td><a href="favori.html"><img src="./coeur2.png" style="width:55% ;margin-right: -450px;"></a></td>
+              <td><a href="compteclient.html"><img src="./myprofile.png" style="width:60%"></a></td> 
+              <td id="panier"><a href="./panier.html"><img src="./icon1.png" style="width:50%">  </a></td>
+      
+            </tr>
+              </table>
+              
+    
+    
+             <!--MENU DEROULANT--> 
+              <nav>
+              <ul>
+                  <li><div class="deroulant">
+                    <a >⚽ Tout type</a>
+                    <div class="contenu-deroulant">
+                      <a href="#">Option 1</a>
+                      <a href="#">Option 2</a>
+                      <a href="#">Option 3</a>
+                    </div>
+                  </div></li>
+    
+                  <li ><a href="./index.php">Meilleures ventes</a>
+     
+                  </li>
+                  <li ><a href="./pageenfant.php">Promotions</a></li>
+                  <li ><a href="./pagefrais.php">Nouveautés</a></li>
+              </ul>
+              
+    
+              <ul class="menu2">
+                  <li ><a href="./pagegourmandise.php">Livraison offerte !</a></li>
+                  <li ><a href="./index.php">Jsp encore</a></li>
+              </ul>
+              
+             </nav>
+           
+    
+          </div>
+    
+    
+    
+    
+    
+      </header>
+    
+    
+
+
+<div class="contact">
+
+
+ <!--<form action="informulaire.php" method="get">   pour pouvoir envoyer a informulaire-->
+
+    <div class="contactez-nous">
+ <h3 style="text-align:center">Demande de contact</h3>
+<p>Un problème, une question,une envie de nous envoyer un message ? N’hésitez pas à utiliser ce formulaire pour prendre contact avec notre équipe !</p>
+
+
+
+<table style="width: 100%;"-->
+
+ <tr>   <!--required pour verifier que le contenu entrer est bon en fonction du type-->
+          <td>Date de contact</td>
+          <td><input type="date" name="datecontact" placeholder="jj/mm/aaaa" required></td>
+      </tr>  <!--type date pour qu'on puisse remplir la date--> <!--placeholder pour guider l'utilisateur-->
+
+ <tr>
+          <td>Nom </td>
+          <td><input type="text" name="Nom" size='40' placeholder="Entrez votre nom" required></td>
+      </tr>
+
+ <tr>
+          <td>Prénom </td>
+          <td><input type="text" name="Prenom" size='40' placeholder="Entrez votre prénom" required></td>
+      </tr>
+
+ <tr>
+          <td>Email </td>
+          <td><input type="email" name="mail" size='40' placeholder="monmail@monsite.org" required></td>
+      </tr>
+
+
+
+<td>Genre </td>
+        <td style="width: 80%;">
+  <form>
+             <input type="radio" name="gender" value="female" >Femme  <!--type radio pour selectionner-->
+             <input type="radio" name="gender" value="male" checked>Homme <!--checked pour que l'utilisateur soit obliger de rep-->
+</form>
+    </td>
+    </tr>
+
+
+
+ <tr>
+          <td>Date de naissance</td>
+          <td><input type="date" name="naissance" placeholder="jj/mm/aaaa" required></td>
+      </tr>
+
+      <tr>
+          <td>Fonction </td> <!--liste avec select option-->
+
+          <td><select name="metier" >
+             <option value="enseignant">Enseignant</option>
+              <option value="eleve">Etudiant</option>
+               <option value="commercant">Commercant</option>
+               <option value="tiers">Tiers</option>
+          </select></td>
+
+      </tr>
+
+ <tr>
+          <td>Sujet: </td>
+          <td><input type="text" name="sujet" size='40' placeholder="Entrez le sujet de votre mail" required></td>
+      </tr>
+
+
+ <tr>
+          <td>Contenu: </td>
+          <td><input type="text" name="contenu" size='70'style="height:110px;" placeholder="Tapez ici votre mail" required/></td>
+      </tr>
+
+
+    </table>
+
+  <p style="margin-left: 500px;">
+         <input type="submit" onmouseover="verif()" value="Soumettre formulaire">
+
+      </p>
+ 
+
+<!--cette fonction devait servir a reverifier grace a JS que l'utilisateur a entrer bonne valeur-->
+      <!-- <script>
+
+      function verif()
+      {
+          var nom = document.forms["RegForm"]["Nom"];
+          var prenom = document.forms["RegForm"]["Prénom"];
+          var mail = document.forms["RegForm"]["mail"];
+          var datecont = document.forms["RegForm"]["datecontact"];
+          var gender =  document.forms["RegForm"]["gender"];
+          var naissance = document.forms["RegForm"]["naissance"];
+          var sujet = document.forms["RegForm"]["sujet"];
+          var contenu = document.forms["RegForm"]["contenu"];
+          var metier = document.forms["RegForm"]["metier"];
+
+          if (nom.value == "")
+          {
+              alert("Mettez votre nom.");
+              nom.focus();
+              return false;
+          }
+
+          if (prenom.value == "")
+          {
+              alert("Mettez votre nom.");
+              prenom.focus();
+              return false;
+          }
+
+
+
+          if (datecont.value == "")
+          {
+              alert("Mettez la bonne date de contact.");
+              datecont.focus();
+              return false;
+          }
+
+          if (mail.value == "")
+          {
+              alert("Mettez une adresse email valide.");
+              mail.focus();
+              return false;
+          }
+          if (mail.value.indexOf("@", 0) < 0)
+          {
+              alert("Mettez une adresse email valide.");
+              mail.focus();
+              return false;
+          }
+          if (mail.value.indexOf(".", 0) < 0)
+          {
+              alert("Mettez une adresse email valide.");
+              mail.focus();
+              return false;
+          }
+          if (sujet.value == "")
+          {
+              alert("Mettez sujet du mail.");
+              sujet.focus();
+              return false;
+          }
+          if (naissance.value == "")
+          {
+              alert("Saisissez votre date de naissance.");
+              naissance.focus();
+              return false;
+          }
+          if (gender.selectedIndex < 1)
+          {
+              alert("Mettez votre sexe.");
+              gender.focus();
+              return false;
+          }
+          if (metier.selectedIndex < 1)
+          {
+              alert("Mettez votre metier.");
+              metier.focus();
+              return false;
+          }
+          if (contenu.value == "")
+          {
+              alert("Écrivez un commentaire.");
+              contenu.focus();
+              return false;
+          }
+          return true;
+      }
+      </script>-->
+
+
+
+  </form>
+  </div>
+</div>
+
+<!------------------FOOTER------------>
+
+
+<footer>
+       
+            
+    <p>&copy; 2023 - Tous droits réservés</p>
+
+  
+    <ul class="reseaux">   <!--pour mettre les icones-->
+      <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
+      <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+      <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
+    </ul>
+  
+
+</footer>
+
+
+  </body>
+</html>

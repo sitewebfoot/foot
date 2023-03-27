@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Déposer un article</title>
+	<link rel="stylesheet" type="text/css" href="deposarticle.css">
+</head>
+<body>
+  <header>
+    <!--<nav>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Équipes</a></li>
+        <li><a href="#">Joueurs</a></li>
+        <li><a href="#">Matchs</a></li>
+        <li><a href="#">Classement</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav> -->
+
+  
+          <!-----------------ENTETE-------------->
+
+       <div class="entete">
+            <table width=100%>
+            <tr><td><a href="https://www.nike.com"><img src="./logo.jpeg" style="width: 10%;margin-top: 0px;"></a></td>
+             
+              <td id="barre-recherche"><form>
+                <input type="text" placeholder="Recherche..." style="width: 100%;">
+                <button type="submit">Rechercher</button>
+              </form></td>
+  
+           <td><a href="./favori.html"><img src="./coeur2.png" style="width:55% ;margin-right: -450px;"></a></td>
+            <td><a href="./panier.php"><img src="./myprofile.png" style="width:60%"></a></td> 
+            <td id="panier"><a href="./panier.php"><img src="./icon1.png" style="width:50%">  </a></td>
+    
+          </tr>
+            </table>
+            
+  
+  
+           <!--MENU DEROULANT--> 
+           
+         <nav>
+            <ul>
+                <li><div class="deroulant">
+                  <a class="dropbtn">⚽ Tout type</a>
+                  <div class="contenu-deroulant">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                </div></li>
+  
+                <li ><a href="./index.php">Meilleures ventes</a>
+   
+                </li>
+                <li ><a href="./pageenfant.php">Promotions</a></li>
+                <li ><a href="./pagefrais.php">Nouveautés</a></li>
+            </ul>
+            
+  
+            <ul class="menu2">
+                <li ><a href="./pagegourmandise.php">Livraison offerte !</a></li>
+                <li ><a href="./index.php">Jsp encore</a></li>
+            </ul>
+            
+           </nav>
+      </div>
+    </header>
+  
+
+ 
+    <!----------------------FORMULAIRE---------------------->
+
+     <!--pour l'instant, le formulaire ne fait rien, il faudra le lier à une page php qui enregistre les données dans la base de données-->
+	<div class="tout">
+
+    <div class="image"> 
+      <img src="mbappegauche.jpg" alt="Décoration">
+    </div>
+
+    <div class="form-content">
+		<h1>Vous souhaitez déposer un article ? Par ici !</h1>
+		<form action="#" method="post">
+
+    
+			<div>
+				<label for="name">Nom de l'article :</label> <!-- le for permet de lier le label au champ de texte qui suit-->
+				<input type="text" id="name" name="name" required> <!-- le required permet de rendre le champ obligatoire-->
+			</div>
+
+
+			<div> 
+				<label for="price">Prix souhaité :</label>  
+				<input type="number" id="price" name="price" required><!-- le type number permet de n'accepter que des chiffres-->
+			</div>
+
+
+			<div>
+				<label for="description">Description :</label>
+				<textarea id="description" name="description" required></textarea>
+			</div>
+
+
+			<div>
+				<label for="image">Image de l'article :</label>
+				<input type="file" id="image" name="image" accept="image/*" multiple required> <!-- le type file permet de choisir un fichier sur son ordinateur, le accept permet de n'accepter que des images, le multiple permet de choisir plusieurs images-->
+        <small>Formats autorisés : jpeg, png. Taille maximale : 2Mo par image.</small>
+			</div>
+
+			<div>
+				<input type="submit" value="Déposer l'article">
+			</div>
+
+
+		</form>
+    </div>
+	</div>
+
+<!----------------------FOOTER---------------------->
+
+  <footer>
+		<p>Tous droits réservés &copy; 2023</p>
+
+	</footer>
+</body>
+</html>
